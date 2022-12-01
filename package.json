@@ -1,6 +1,6 @@
 {
   "name": "weather",
-  "homepage": "https://github.com/ibondrk/weather",
+  "homepage": "https://ibondrk.github.io/weather/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
