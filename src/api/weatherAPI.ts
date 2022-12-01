@@ -6,6 +6,6 @@ const lang = 'uk';
 
 export const getWeather = (days: number) => {
   return client.get<Weather>(
-    `forecast.json?key=${key}&q=kamelnitskiy&lang=${lang}&days=${days}`
+    `forecast.json?key=${key}&q=auto:ip&lang=${lang}&days=${days}`
   );
 };
