@@ -1,0 +1,86 @@
+@use '../../styles/extends' as extends;
+@use '../../styles/vars' as vars;
+
+.isActive {
+  border: 1px solid #dbdbdb;
+  border-bottom-color: transparent;
+  background-color: var(--back-cl);
+  border-radius: 4px 4px 0 0;
+  @extend %tab-set;
+}
+
+.notFirst {
+  border-left-color: transparent;
+}
+
+.notLast {
+  border-right-color: transparent;
+}
+
+.tabs {
+  font-family: 'MacPawFixelTextRegular';
+  -webkit-overflow-scrolling: touch;
+  align-items: stretch;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  white-space: nowrap;
+
+  &_list {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: flex-start;
+  }
+
+  &_item {
+    @extend %tab-set;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    background-color: var(--items-cl);
+    min-width: 113px;
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  &_link {
+    color: var(--tabs-text-cl);
+    text-decoration: none;
+  }
+
+  &_temperature {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &_date {
+    display: grid;
+    gap: 3px;
+    font-size: 12px;
+
+    &_description {
+      text-transform: capitalize;
+      font-size: 14px;
+    }
+
+    &_numb {
+      font-family: 'MacPawFixelTextMedium';
+      font-size: 20px;
+    }
+  }
+}
+
+.description {
+  display: grid;
+  align-self: center;
+  margin-bottom: 3px;
+  gap: 2px;
+
+  &_text {
+    font-size: 12px;
+  }
+}

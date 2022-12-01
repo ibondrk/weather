@@ -1,0 +1,55 @@
+@use '../../styles/mixins.scss' as mixins;
+
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--back-cl);
+  font-family: 'MacPawFixelTextRegular';
+  position: sticky;
+  top: 0;
+  
+  box-shadow: 0px 1px 0px var(--borders-cl);
+  
+  margin-bottom: 24px;
+  
+  @include mixins.onTablet {
+    flex-direction: row;
+    margin-bottom: 32px;
+    padding: 0 10px;
+  }
+
+  @include mixins.onDesktop {
+    margin-bottom: 56px;
+  }
+}
+
+.main_wrapper {
+  display: flex;
+  position: relative;
+  height: 50px;
+}
+
+.nav_bar {
+  margin: auto;
+}
+
+.PC_navigation {
+  display: none;
+
+  @include mixins.onTablet {
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.wrapper {
+  display: none;
+
+  @include mixins.onTablet {
+    display: flex;
+  }
+}

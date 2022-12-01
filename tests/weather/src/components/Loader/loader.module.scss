@@ -1,0 +1,35 @@
+.loader {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  display: inline-block;
+
+  &_wave_f {
+    position: absolute;
+    border: 4px solid #009fb7;
+    border-radius: 50%;
+    animation: loader 1s ease-out infinite;
+  }
+
+  &_wave_s {
+    animation-delay: -0.5s;
+  }
+}
+
+@keyframes loader {
+  0% {
+    top: 64px;
+    left: 64px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    width: 128px;
+    height: 128px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,80 @@
+@use "../../styles/mixins.scss" as mixins;
+@use '../../styles/vars' as vars;
+
+.forecast_mainInfo {
+  display: flex;
+  gap: 20px;
+}
+
+.selected_odd {
+  background-color: var(--selected-odd-cl);
+}
+
+.selected_even {
+  background-color: var(--items-cl);
+}
+
+.odd {
+  background-color: var(--odd-cl);
+}
+
+.date_block {
+  display: none;
+
+  @include mixins.onTablet {
+    display: grid;
+    grid-row: 1/2;
+    gap: 10px;
+    align-content: center;
+    width: 110px;
+  }
+
+  font-family: 'MacPawFixelTextMedium';
+
+  &_weekday {
+    text-transform: capitalize;
+    font-size: 18px;
+  }
+
+  &_date {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  &_month {
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+}
+
+.weather_details {
+  display: grid;
+  grid-row: 1/2;
+  justify-content: start;
+}
+
+.table {
+  font-family: 'MacPawFixelTextRegular';
+  font-size: 14px;
+  align-content: center;
+
+  &_head {
+    display: none;
+
+    @include mixins.onTablet {
+      display: table-header-group;
+    }
+  }
+
+  &_elem {
+    padding: 5px;
+  }
+
+  &_description {
+    font-size: 12px;
+
+    @include mixins.onTablet {
+      font-size: 14px;
+    }
+  }
+}

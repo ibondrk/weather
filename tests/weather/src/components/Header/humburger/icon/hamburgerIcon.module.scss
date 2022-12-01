@@ -1,0 +1,110 @@
+@use "../../../../styles/mixins.scss" as mixins;
+
+.hamburger_icon {
+  box-shadow: -1px 0px 0px #323542;
+  display: grid;
+  place-items: center;
+
+  height: 48px;
+  width: 48px;
+
+  @include mixins.onTablet {
+    display: none;
+  }
+}
+
+.checkbox_input {
+  display: none;
+}
+
+.toggle_label {
+  font-size: calc(10px + 1vmin);
+  --bounce: 0.2s cubic-bezier(0.3, 0.3, 0.3, 1);
+  --ease: 0.12s cubic-bezier(0.3, 0.3, 0.3, 1);
+  --weight: 10%;
+  --size: 3em;
+  position: relative;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  width: var(--size);
+  height: var(--size);
+
+  &_circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--text-color);
+    stroke-width: calc(var(--weight) * 0.6);
+    stroke-dasharray: 284;
+    stroke-dashoffset: 284;
+    stroke-linecap: round;
+    transition: 0.4s ease;
+  }
+
+  &_hamburger {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 63%;
+    height: 63%;
+
+    &::before {
+      top: 0;
+      transform: translate(var(--tx), 100%) rotate(var(--rt));
+    }
+
+    &::after {
+      bottom: 0;
+      transform: translate(var(--tx), -100%) rotate(var(--rt));
+    }
+  }
+}
+
+.toggle_label_hamburger::before,
+.toggle_label_hamburger .center,
+.toggle_label_hamburger::after {
+  --tx: 0;
+  --rt: 0deg;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: var(--weight);
+  border-radius: 0.3em;
+  background: var(--text-color);
+  transform-origin: right;
+  transition: var(--bounce) 0.1s;
+}
+
+.toggle_label_hamburger .center {
+  right: 0;
+  transition: var(--bounce), width var(--ease);
+  transition-delay: 0.3s;
+}
+
+.circle_opened {
+  stroke-dashoffset: 0;
+  transition-delay: 0.3s;
+}
+
+.label_hamburger_opened {
+  &::before {
+    --tx: -15%;
+    --rt: 45deg;
+    --ty: 15%;
+    --rt: -45deg;
+    transition: var(--bounce) 0.1s;
+  }
+
+  &::after {
+    --tx: -15%;
+    --rt: 45deg;
+    transition: var(--bounce) 0.1s;
+  }
+}
+
+.center_opened {
+  width: 0;
+  right: calc(var(--size) * -0.16);
+  transition: width var(--ease), right var(--bounce);
+}

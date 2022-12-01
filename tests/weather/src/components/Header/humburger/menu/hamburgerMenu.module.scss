@@ -1,0 +1,17 @@
+@use "../../../../styles/mixins.scss" as mixins;
+
+.mob_nav {
+  display: flex;
+  background-color: var(--back-cl);
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mixins.onTablet {
+    display: none;
+  }
+}
+
+.lock_scroll {
+  overflow: hidden;
+}

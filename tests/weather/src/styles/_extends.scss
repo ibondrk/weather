@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'MacPawFixelTextRegular';
+  src: url(../fonts/MacPawFixelText-Regular.woff2) format('woff2'),
+    url(../fonts/MacPawFixelText-Regular.otf) format('opentype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'MacPawFixelTextBold';
+  src: url(../fonts/MacPawFixelText-Bold.woff2) format('woff2'),
+    url(../fonts/MacPawFixelText-Bold.otf) format('opentype');
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'MacPawFixelTextMedium';
+  src: url(../fonts/MacPawFixelText-Medium.woff2) format('woff2'),
+    url(../fonts/MacPawFixelText-Medium.otf) format('opentype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+%tab-set {
+  min-width: 113px;
+  padding: 5px 0;
+}
+

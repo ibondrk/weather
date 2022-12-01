@@ -1,0 +1,21 @@
+@import url(./_reset.scss);
+@import url(./_vars.scss);
+@import url(./_extends.scss);
+@import url(./grid.scss);
+
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+  background-color: var(--back-cl);
+}
+
+.App {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.sec_forecast {
+  display: grid;
+  gap: 20px;
+}
+
