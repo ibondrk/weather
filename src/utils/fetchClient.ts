@@ -11,7 +11,6 @@ function request<T>(url: string, method = 'GET'): Promise<T> {
 
   options.headers = {
     'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json',
   };
 
   return wait(300)

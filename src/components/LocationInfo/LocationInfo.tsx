@@ -10,6 +10,7 @@ export const LocationInfo: React.FC = () => {
     <div>
       <h2 className={style.loc}>
         Forecast in {weather?.location.name} {weather?.location.region}
+        {weather?.location.country}
         {weather?.location.country === 'Ukraine' && ' tryzub'}
       </h2>
     </div>
