@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/weather/static/css/main.bc915587.css",
-    "main.js": "/weather/static/js/main.3349c630.js",
+    "main.css": "/weather/static/css/main.ef932d16.css",
+    "main.js": "/weather/static/js/main.1c2ea6ec.js",
     "static/js/787.13d76ca7.chunk.js": "/weather/static/js/787.13d76ca7.chunk.js",
     "static/media/MacPawFixelText-Bold.otf": "/weather/static/media/MacPawFixelText-Bold.108494f8eebf69849662.otf",
     "static/media/MacPawFixelText-Medium.otf": "/weather/static/media/MacPawFixelText-Medium.d8275f85d8d37cff6845.otf",
@@ -12,12 +12,12 @@
     "static/media/sun.svg": "/weather/static/media/sun.ab49f627efa588cec79b.svg",
     "static/media/moon-fill.svg": "/weather/static/media/moon-fill.fccae08170a3a18a2bdc.svg",
     "index.html": "/weather/index.html",
-    "main.bc915587.css.map": "/weather/static/css/main.bc915587.css.map",
-    "main.3349c630.js.map": "/weather/static/js/main.3349c630.js.map",
+    "main.ef932d16.css.map": "/weather/static/css/main.ef932d16.css.map",
+    "main.1c2ea6ec.js.map": "/weather/static/js/main.1c2ea6ec.js.map",
     "787.13d76ca7.chunk.js.map": "/weather/static/js/787.13d76ca7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc915587.css",
-    "static/js/main.3349c630.js"
+    "static/css/main.ef932d16.css",
+    "static/js/main.1c2ea6ec.js"
   ]
 }
