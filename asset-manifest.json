@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ibondrk/weather/static/css/main.4e3f9da3.css",
-    "main.js": "/ibondrk/weather/static/js/main.c38421c6.js",
-    "static/js/787.13d76ca7.chunk.js": "/ibondrk/weather/static/js/787.13d76ca7.chunk.js",
-    "static/media/MacPawFixelText-Bold.otf": "/ibondrk/weather/static/media/MacPawFixelText-Bold.108494f8eebf69849662.otf",
-    "static/media/MacPawFixelText-Medium.otf": "/ibondrk/weather/static/media/MacPawFixelText-Medium.d8275f85d8d37cff6845.otf",
-    "static/media/MacPawFixelText-Regular.otf": "/ibondrk/weather/static/media/MacPawFixelText-Regular.75d44f06aa78a75b45a2.otf",
-    "static/media/MacPawFixelText-Bold.woff2": "/ibondrk/weather/static/media/MacPawFixelText-Bold.6490bc31f1ead8b86987.woff2",
-    "static/media/MacPawFixelText-Medium.woff2": "/ibondrk/weather/static/media/MacPawFixelText-Medium.b3687c225113a7c9dd25.woff2",
-    "static/media/MacPawFixelText-Regular.woff2": "/ibondrk/weather/static/media/MacPawFixelText-Regular.615b696311567a1434b9.woff2",
-    "static/media/sun.svg": "/ibondrk/weather/static/media/sun.ab49f627efa588cec79b.svg",
-    "index.html": "/ibondrk/weather/index.html",
-    "static/media/moon-fill.svg": "/ibondrk/weather/static/media/moon-fill.fccae08170a3a18a2bdc.svg",
-    "main.4e3f9da3.css.map": "/ibondrk/weather/static/css/main.4e3f9da3.css.map",
-    "main.c38421c6.js.map": "/ibondrk/weather/static/js/main.c38421c6.js.map",
-    "787.13d76ca7.chunk.js.map": "/ibondrk/weather/static/js/787.13d76ca7.chunk.js.map"
+    "main.css": "/weather/static/css/main.bc915587.css",
+    "main.js": "/weather/static/js/main.6ff883b8.js",
+    "static/js/787.13d76ca7.chunk.js": "/weather/static/js/787.13d76ca7.chunk.js",
+    "static/media/MacPawFixelText-Bold.otf": "/weather/static/media/MacPawFixelText-Bold.108494f8eebf69849662.otf",
+    "static/media/MacPawFixelText-Medium.otf": "/weather/static/media/MacPawFixelText-Medium.d8275f85d8d37cff6845.otf",
+    "static/media/MacPawFixelText-Regular.otf": "/weather/static/media/MacPawFixelText-Regular.75d44f06aa78a75b45a2.otf",
+    "static/media/MacPawFixelText-Bold.woff2": "/weather/static/media/MacPawFixelText-Bold.6490bc31f1ead8b86987.woff2",
+    "static/media/MacPawFixelText-Medium.woff2": "/weather/static/media/MacPawFixelText-Medium.b3687c225113a7c9dd25.woff2",
+    "static/media/MacPawFixelText-Regular.woff2": "/weather/static/media/MacPawFixelText-Regular.615b696311567a1434b9.woff2",
+    "static/media/sun.svg": "/weather/static/media/sun.ab49f627efa588cec79b.svg",
+    "static/media/moon-fill.svg": "/weather/static/media/moon-fill.fccae08170a3a18a2bdc.svg",
+    "index.html": "/weather/index.html",
+    "main.bc915587.css.map": "/weather/static/css/main.bc915587.css.map",
+    "main.6ff883b8.js.map": "/weather/static/js/main.6ff883b8.js.map",
+    "787.13d76ca7.chunk.js.map": "/weather/static/js/787.13d76ca7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e3f9da3.css",
-    "static/js/main.c38421c6.js"
+    "static/css/main.bc915587.css",
+    "static/js/main.6ff883b8.js"
   ]
 }
