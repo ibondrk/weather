@@ -9,10 +9,6 @@ function wait(delay: number) {
 function request<T>(url: string, method = 'GET'): Promise<T> {
   const options: RequestInit = { method };
 
-  options.headers = {
-    'Access-Control-Allow-Origin': '*',
-  };
-
   return wait(300)
     .then(() => fetch(BASE_URL + url, options))
     .then((response) => {
