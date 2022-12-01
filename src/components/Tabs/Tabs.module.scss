@@ -1,5 +1,6 @@
 @use '../../styles/extends' as extends;
 @use '../../styles/vars' as vars;
+@use '../../styles/mixins.scss' as mixins;
 
 .isActive {
   border: 1px solid #dbdbdb;
@@ -20,27 +21,25 @@
 .tabs {
   font-family: 'MacPawFixelTextRegular';
   -webkit-overflow-scrolling: touch;
-  align-items: stretch;
-  display: flex;
-  font-size: 1rem;
-  justify-content: space-between;
-  white-space: nowrap;
+  // align-items: stretch;
+  // display: flex;
+  // font-size: 1rem;
+  // justify-content: space-between;
+  // white-space: nowrap;
 
-  &_list {
-    align-items: center;
-    display: flex;
-    flex-grow: 1;
-    flex-shrink: 0;
-    justify-content: flex-start;
-  }
+  // &_list {
+  //   align-items: center;
+  //   display: flex;
+  //   flex-grow: 1;
+  //   // flex-shrink: 0;
+  //   justify-content: flex-start;
+  // }
 
   &_item {
     @extend %tab-set;
     border: 1px solid #dbdbdb;
     border-radius: 4px;
     background-color: var(--items-cl);
-    min-width: 113px;
-
     :hover {
       cursor: pointer;
     }
@@ -82,5 +81,35 @@
 
   &_text {
     font-size: 12px;
+  }
+}
+
+.container {
+  font-family: 'MacPawFixelTextRegular';
+  overflow: hidden;
+
+  @include mixins.onDesktop {
+    max-width: 50%;
+  }
+}
+
+.slider_pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  &_button {
+    height: 32px;
+    border: 1px solid var(--borders-cl);
+    width: 32px;
+    cursor: pointer;
+
+    transition: border 0.3s;
+    color: var(--tabs-text-cl);
+    background-color: var(--selected-odd-cl);
+    
+    &:disabled {
+      background-color: var(--items-cl);
+    }
   }
 }
