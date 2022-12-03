@@ -13,12 +13,14 @@ import { Header } from './components/Header';
 
 const App: FC = () => {
   const dispatch = useAppDispatch();
-  const { weather, forecastDays } = useAppSelector((state) => state.weather);
+  const { weather, forecastDays, askedLocation } = useAppSelector(
+    (state) => state.weather
+  );
   const { isMenuOpen } = useAppSelector((state) => state.menu);
 
   useEffect(() => {
-    dispatch(weatherActions.init(forecastDays));
-  }, [forecastDays]);
+    dispatch(weatherActions.init({ forecastDays, askedLocation }));
+  }, [forecastDays, askedLocation]);
 
   return (
     <div className="App" id="App">

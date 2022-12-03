@@ -5,6 +5,7 @@
   display: grid;
   gap: 20px;
   overflow: hidden;
+  text-align: center;
 
   @include mixins.onDesktop {
     max-width: 50%;

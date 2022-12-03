@@ -10,9 +10,9 @@
   position: sticky;
   top: 0;
   box-shadow: 0px 1px 0px var(--borders-cl);
-  
+  z-index: 5;
   margin-bottom: 24px;
-  
+
   @include mixins.onTablet {
     flex-direction: row;
     margin-bottom: 32px;
@@ -51,4 +51,8 @@
   @include mixins.onTablet {
     display: flex;
   }
+}
+
+.test {
+  position: relative;
 }

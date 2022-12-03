@@ -9,6 +9,7 @@ type WeatherState = {
   error: string;
   selectedDay: Forecastday | null;
   forecastDays: number;
+  askedLocation: string;
 };
 
 const initialState: WeatherState = {
@@ -17,6 +18,7 @@ const initialState: WeatherState = {
   error: '',
   selectedDay: null,
   forecastDays: 7,
+  askedLocation: 'auto:ip',
 };
 
 const weatherSlice = createSlice({
@@ -28,6 +30,9 @@ const weatherSlice = createSlice({
     },
     setForecastDays: (state, action: PayloadAction<number>) => {
       state.forecastDays = action.payload;
+    },
+    setAskedLocation: (state, action: PayloadAction<string>) => {
+      state.askedLocation = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -48,12 +53,12 @@ const weatherSlice = createSlice({
   },
 });
 
-export const init = createAsyncThunk(
-  'weather/fetch',
-  async (forecastDays: number) => {
-    return getWeather(forecastDays);
-  }
-);
+export const init = createAsyncThunk<
+  Weather,
+  { forecastDays: number; askedLocation: string }
+>('weather/fetch', async ({ forecastDays, askedLocation }) => {
+  return getWeather(forecastDays, askedLocation);
+});
 
 export const { actions } = weatherSlice;
 

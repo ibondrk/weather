@@ -1,10 +1,12 @@
 import React from 'react';
 import style from './location.module.scss';
 
-import { useAppSelector } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import * as weatherActions from '../../app/featcher/weather';
 
 export const LocationInfo: React.FC = () => {
-  const { weather } = useAppSelector((state) => state.weather);
+  const dispatch = useAppDispatch();
+  const { weather, askedLocation } = useAppSelector((state) => state.weather);
 
   return (
     <div>
@@ -13,6 +15,19 @@ export const LocationInfo: React.FC = () => {
         {weather?.location.country}
         {weather?.location.country === 'Ukraine' && ' tryzub'}
       </h2>
+      <select
+        id="locationSelection"
+        value={askedLocation}
+        onChange={(event) => {
+          dispatch(weatherActions.actions.setAskedLocation(event.target.value));
+        }}
+      >
+        <option value="auto:ip">Місцезнаходження</option>
+        <option value="Kiev">Київ</option>
+        <option value="Kamelnitskiy">Хмельницький</option>
+        <option value="Lviv">Львів</option>
+        <option value="Vinnitsa">Вінниця</option>
+      </select>
     </div>
   );
 };

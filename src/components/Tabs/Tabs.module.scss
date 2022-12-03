@@ -21,19 +21,6 @@
 .tabs {
   font-family: 'MacPawFixelTextRegular';
   -webkit-overflow-scrolling: touch;
-  // align-items: stretch;
-  // display: flex;
-  // font-size: 1rem;
-  // justify-content: space-between;
-  // white-space: nowrap;
-
-  // &_list {
-  //   align-items: center;
-  //   display: flex;
-  //   flex-grow: 1;
-  //   // flex-shrink: 0;
-  //   justify-content: flex-start;
-  // }
 
   &_item {
     @extend %tab-set;
@@ -86,6 +73,7 @@
 
 .container {
   font-family: 'MacPawFixelTextRegular';
+  text-align: center;
   overflow: hidden;
 
   @include mixins.onDesktop {

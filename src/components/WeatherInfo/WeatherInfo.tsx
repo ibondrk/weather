@@ -82,10 +82,7 @@ export const WeatherInfo: React.FC = () => {
         >
           {weatherByHours.map((hour) => {
             return (
-              <SwiperSlide
-                key={hour.time_epoch}
-                // className={style.table_element}
-              >
+              <SwiperSlide key={hour.time_epoch}>
                 <p
                   className={classNames(
                     style.table_item_elem,

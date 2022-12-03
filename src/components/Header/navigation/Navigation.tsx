@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import style from './navigation.module.scss';
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
@@ -13,10 +13,6 @@ export const Navigation: React.FC = () => {
 
   const dispatch = useAppDispatch();
   const { forecastDays } = useAppSelector((state) => state.weather);
-
-  useEffect(() => {
-    dispatch(weatherActions.init(forecastDays));
-  }, [forecastDays]);
 
   return (
     <nav>
