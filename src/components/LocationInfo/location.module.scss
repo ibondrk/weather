@@ -2,4 +2,24 @@
 
 .loc {
   font-family: 'MacPawFixelTextRegular';
+  display: grid;
+  @include mixins.onDesktop {
+    max-width: 50%;
+  }
+
+  &_title {
+    grid-row: 1/2;
+  }
+  
+  &_select {
+    grid-row: 1/2;
+    background: var(--items-cl);
+    color: var(--text-color);
+    font-size: 16px;
+  }
+}
+
+.loc_select option {
+  background-color: var(--back-cl);
+  color: var(--text-color);
 }

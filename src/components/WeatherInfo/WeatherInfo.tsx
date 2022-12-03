@@ -23,7 +23,7 @@ export const WeatherInfo: React.FC = () => {
       return;
     }
 
-    for (let i = 1; i <= 24; i += 3) {
+    for (let i = 1; i <= selectedDay.hour.length; i += 3) {
       weatherEachHour.push(selectedDay.hour[i]);
     }
     setWeatherByHours(weatherEachHour);

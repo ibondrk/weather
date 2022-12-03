@@ -29,7 +29,7 @@ const App: FC = () => {
       {weather ? (
         <section className="sec_forecast">
           <LocationInfo />
-          <Tabs />
+          {weather.forecast.forecastday.length > 1 && <Tabs />}
           <WeatherInfo />
         </section>
       ) : (
