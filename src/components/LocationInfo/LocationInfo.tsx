@@ -12,7 +12,7 @@ export const LocationInfo: React.FC = () => {
   return (
     <div className={classNames(style.loc, 'S--1-4', 'T--1-12')}>
       <h2 className={(style.loc_title, 'T--1-3')}>
-        Forecast in
+        Forecast at
         {` ${weather?.location.name} ${weather?.location.region} ${weather?.location.country}`}
         {weather?.location.country === 'Ukraine' && ' tryzub'}
       </h2>
@@ -22,7 +22,7 @@ export const LocationInfo: React.FC = () => {
         onChange={(event) => {
           dispatch(weatherActions.actions.setAskedLocation(event.target.value));
         }}
-        className={classNames(style.loc_select, 'S--3-4', 'T--5-6')}
+        className={classNames(style.loc_select, 'S--3-4', 'T--6-6')}
       >
         <option value="auto:ip" className={style.loc_select_options}>
           Місцезнаходження

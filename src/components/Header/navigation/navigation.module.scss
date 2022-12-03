@@ -38,8 +38,10 @@
 .choosed_link {
   color: var(--text-color);
   position: relative;
+  transition: 0.3s ease;
 
   &::after {
+    animation: line 0.3s ease;
     content: "";
     position: absolute;
     bottom: -12px;
@@ -48,5 +50,14 @@
     height: 3px;
     border-radius: 5px;
     background: var(--text-color);
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
