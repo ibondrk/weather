@@ -13,3 +13,7 @@ Clone this repo and use:
 ```bash
 npm i
 ```
+After installing all the files, you can run the project with command:
+```bash
+npm start
+```
