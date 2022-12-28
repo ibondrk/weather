@@ -1,11 +1,11 @@
 import { Weather } from '../types/Weather';
 import { client } from '../utils/fetchClient';
 
-const key = '4458a22571d74f7988c202157223011';
+const API_KEY = process.env.REACT_APP_API_KEY;
 const lang = 'uk';
 
 export const getWeather = (days: number, city: string) => {
   return client.get<Weather>(
-    `forecast.json?key=${key}&q=${city}&lang=${lang}&days=${days}`
+    `forecast.json?key=${API_KEY}&q=${city}&lang=${lang}&days=${days}`
   );
 };
